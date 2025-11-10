@@ -5,31 +5,41 @@
 public class Solver{
     public static boolean StringTest(String s){
         String sub = s.substring(0,1);
-        String sub2;
+        String newS;
         if(sub.equals("(")){
             for(int i = 1;i < s.length();i++){
                 if(s.indexOf[i].equals(")")){
-                    sub2 = s.substring(i, i+1);
-                }
-            }
-        }
-        else if (sub.equals("[")){
-            for(int i = 1;i < s.length();i++){
-                if(s.indexOf[i].equals("]")){
-                    sub2 = s.substring(i, i+1);
-                }
-            }
-        }
-        else if (sub.equals("{")){
-            for(int i = 1;i < s.length();i++){
-                if(s.indexOf[i].equals("}")){
-                    sub2 = s.substring(i, i+1);
+                   newS = s.substring(0, i) + s.substring(i + 1); 
                 }
             }
         }
         else{
             return false;
         }
+        if (sub.equals("[")){
+            for(int i = 1;i < s.length();i++){
+                if(s.indexOf[i].equals("]")){
+                    newS = s.substring(0, i) + s.substring(i + 1);
+                }
+            }
+        }
+        else{
+            return false;
+        }
+        if (sub.equals("{")){
+            for(int i = 1;i < s.length();i++){
+                if(s.indexOf[i].equals("}")){
+                    newS = s.substring(0, i) + s.substring(i + 1);
+                }
+            }
+        }
+        if(s.equal("")){
+            return true;
+        } else{
+            return false;
+        }
     }
 }
     
+/* int indexToRemove = 4; 
+    String newS = s.substring(0, i) + s.substring(i + 1);*/
