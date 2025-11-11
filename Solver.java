@@ -5,7 +5,8 @@
 public class Solver{
     public static boolean StringTest(String s){
         String sub = s.substring(0,1);
-        String newS;
+        String newS = s.substring(1);
+        do{
         if(sub.equals("(")){
             for(int i = 1;i < s.length();i++){
                 if(s.indexOf[i].equals(")")){
@@ -33,13 +34,26 @@ public class Solver{
                 }
             }
         }
+    }while (s.length() > 0);
         if(s.equal("")){
             return true;
         } else{
             return false;
         }
     }
+    public static void main(String[] args) {
+        StringTest("(){}[]");
+    }
 }
     
 /* int indexToRemove = 4; 
-    String newS = s.substring(0, i) + s.substring(i + 1);*/
+    String newS = s.substring(0, i) + s.substring(i + 1);
+    
+    do{
+    
+    }while(s.length() > 0)*/
+
+    /*
+     
+    
+     */
