@@ -3,11 +3,17 @@
 //Determine if all the open parantheses in the string have matching closing parantheses
 
 public class Solver{
-    public static boolean StringTest(String s){
-        
+    public static boolean isValid(String s){
+        String s2 = s.substring(0,1);
+        s = s.substring(1);
+        if((s2.equals("{")) || (s2.equals("[")) || (s2.equals("("))){
+            
+        } else{
+            return false;
+        }
     }
     public static void main(String[] args) {
-        StringTest("(){}[]");
+        isValid("(){}[]");
     }
 }
     
